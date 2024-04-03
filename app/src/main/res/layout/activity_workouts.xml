@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WorkoutsActivity">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/trainer_templates_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:headerLayout="@layout/nav_header"
+        />
+
+    <TextView
+        android:id="@+id/tv_gambe"
+        android:text="Gambe"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@id/trainer_templates_navigation_view"
+        android:gravity="center_vertical|center_horizontal"
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2sp"
+        android:background="@color/header"
+        android:layout_below="@id/tv_gambe"
+        />
+
+    <TextView
+        android:id="@+id/tv_addominali"
+        android:text="Addominali"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@id/tv_gambe"
+        android:gravity="center_vertical|center_horizontal"
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2sp"
+        android:background="@color/header"
+        android:layout_below="@id/tv_addominali"
+        />
+
+    <TextView
+        android:id="@+id/tv_bicipiti"
+        android:text="Bicipiti"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@id/tv_addominali"
+        android:gravity="center_vertical|center_horizontal"
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2sp"
+        android:background="@color/header"
+        android:layout_below="@id/tv_bicipiti"
+        />
+
+    <TextView
+        android:id="@+id/tv_tricipiti"
+        android:text="Tricipiti"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@id/tv_bicipiti"
+        android:gravity="center_vertical|center_horizontal"
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2sp"
+        android:background="@color/header"
+        android:layout_below="@id/tv_tricipiti"
+        />
+
+    <TextView
+        android:id="@+id/tv_dorsali"
+        android:text="Dorsali"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@id/tv_tricipiti"
+        android:gravity="center_vertical|center_horizontal"
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2sp"
+        android:background="@color/header"
+        android:layout_below="@id/tv_dorsali"
+        />
+
+    <TextView
+        android:id="@+id/tv_pettorali"
+        android:text="Pettorali"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@id/tv_dorsali"
+        android:gravity="center_vertical|center_horizontal"
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2sp"
+        android:background="@color/header"
+        android:layout_below="@id/tv_pettorali"
+        />
+
+    <TextView
+        android:id="@+id/tv_spalle"
+        android:text="Spalle"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@id/tv_pettorali"
+        android:gravity="center_vertical|center_horizontal"
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2sp"
+        android:background="@color/header"
+        android:layout_below="@id/tv_spalle"
+        />
+
+</RelativeLayout>

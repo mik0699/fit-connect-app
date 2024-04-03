@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrainerAddModExerciseActivity">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/trainer_add_ex_nv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:headerLayout="@layout/nav_header"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/trainer_add_ex_nv"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_fascia"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:hint="Fascia muscolare"
+                android:layout_marginTop="20dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                app:boxStrokeColor="@color/header"
+                app:hintTextColor="@color/header"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/ac_fascia"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="none"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_tipo"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ti_fascia"
+                app:layout_constraintStart_toStartOf="@id/ti_fascia"
+                app:layout_constraintEnd_toEndOf="@id/ti_fascia"
+                android:hint="Tipologia"
+                android:layout_marginTop="20dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                app:boxStrokeColor="@color/header"
+                app:hintTextColor="@color/header"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/ac_tipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="none"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_set"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ti_tipo"
+                app:layout_constraintStart_toStartOf="@id/ti_tipo"
+                app:layout_constraintEnd_toEndOf="@id/ti_tipo"
+                android:layout_marginTop="20dp"
+                android:hint="Set"
+                style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
+                android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+                >
+
+                <EditText
+                    android:id="@+id/et_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_ripetizioni"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ti_set"
+                app:layout_constraintStart_toStartOf="@id/ti_set"
+                app:layout_constraintEnd_toEndOf="@id/ti_set"
+                android:layout_marginTop="20dp"
+                android:hint="Ripetizioni"
+                style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
+                android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+                >
+
+                <EditText
+                    android:id="@+id/et_ripetizioni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_peso"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ti_ripetizioni"
+                app:layout_constraintStart_toStartOf="@id/ti_ripetizioni"
+                app:layout_constraintEnd_toEndOf="@id/ti_ripetizioni"
+                android:layout_marginTop="20dp"
+                android:hint="Peso (Kg)"
+                style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
+                android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+                >
+
+                <EditText
+                    android:id="@+id/et_peso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_riposo"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ti_peso"
+                app:layout_constraintStart_toStartOf="@id/ti_peso"
+                app:layout_constraintEnd_toEndOf="@id/ti_peso"
+                android:layout_marginTop="20dp"
+                android:hint="Riposo (m:ss)"
+                style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
+                android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+                >
+
+                <EditText
+                    android:id="@+id/et_riposo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="time"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_add_mod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/ti_riposo"
+                app:layout_constraintEnd_toEndOf="@id/ti_riposo"
+                app:layout_constraintTop_toBottomOf="@id/ti_riposo"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/primary_btn"
+                android:textColor="@color/white"
+                android:text="Modifica esercizio"
+                />
+
+            <ImageView
+                android:id="@+id/img_delete"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_delete_forever_24"
+                app:layout_constraintTop_toBottomOf="@id/btn_add_mod"
+                app:layout_constraintStart_toStartOf="@id/btn_add_mod"
+                app:layout_constraintEnd_toEndOf="@id/btn_add_mod"
+                android:layout_marginTop="20dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

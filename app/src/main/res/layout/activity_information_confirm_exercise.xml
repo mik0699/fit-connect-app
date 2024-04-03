@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InformationConfirmExerciseActivity">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/trainer_conf_ex_nv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:headerLayout="@layout/nav_header"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/trainer_conf_ex_nv"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <WebView
+                android:id="@+id/ww_ex"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="30dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_tipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ww_ex"
+                app:layout_constraintStart_toStartOf="@id/ww_ex"
+                app:layout_constraintEnd_toEndOf="@id/ww_ex"
+                android:text="Tipologia"
+                android:textSize="32sp"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                />
+
+            <TableLayout
+                android:id="@+id/table_ex"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_tipo"
+                app:layout_constraintStart_toStartOf="@id/tv_tipo"
+                app:layout_constraintEnd_toEndOf="@id/tv_tipo"
+                android:stretchColumns="1"
+                android:background="@drawable/table_border"
+                android:layout_marginTop="30dp"
+                >
+                <TableRow>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Fascia\nmuscolare"
+                        android:textSize="20sp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:background="@drawable/table_cell"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_fascia"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Gambe"
+                        android:textSize="20sp"
+                        android:gravity="center|left"
+                        android:padding="10dp"
+                        android:background="@drawable/table_cell"
+                        />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Carico"
+                        android:textSize="20sp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:background="@drawable/table_cell"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_carico"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Medio alto"
+                        android:textSize="20sp"
+                        android:gravity="center|left"
+                        android:padding="10dp"
+                        android:background="@drawable/table_cell"
+                        />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Peso\nutilizzato"
+                        android:textSize="20sp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:background="@drawable/table_cell"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_peso"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Medo alto"
+                        android:textSize="20sp"
+                        android:gravity="center|left"
+                        android:padding="10dp"
+                        android:background="@drawable/table_cell"
+                        />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Note"
+                        android:textSize="20sp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:background="@drawable/table_cell"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_note"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Tenere il petto all'infuori e inarcare la schiena"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:gravity="center|left"
+                        android:background="@drawable/table_cell"
+                        />
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:id="@+id/btn_add_mod"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toBottomOf="@id/table_ex"
+                app:layout_constraintStart_toStartOf="@id/table_ex"
+                app:layout_constraintEnd_toEndOf="@id/table_ex"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/primary_btn"
+                android:textColor="@color/white"
+                android:text="Conferma"
+                android:textSize="20sp"
+                android:layout_marginBottom="30dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</RelativeLayout>
